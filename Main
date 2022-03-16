@@ -1,0 +1,194 @@
+import java.util.Scanner;
+
+//Programa para contabilizar Fundo de caixa diário do açaí
+
+public class FundoDeCaixa {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//5 Reais
+		System.out.print ("Quantos copos de 150 ml foram usados?" );
+		int copo150ml = sc.nextInt();
+
+		System.out.print("Quantos foram no dinheiro?" );
+		int d150 = sc.nextInt();
+		int c1;
+			c1 = (copo150ml - d150);
+			int total150, dinheiro150, cartao150;
+
+			total150 = (copo150ml * 5);
+			dinheiro150 = (d150 *5);
+			cartao150 = (total150 - dinheiro150);
+
+			//6 reais
+		System.out.print("Quantos copos de 200 ml foram usados? ");
+		int copo200ml = sc.nextInt();
+
+		System.out.print("Quantos foram pagos no dinheiro? ");
+		int d200 = sc.nextInt();
+		int c2;
+				c2 = (copo200ml - d200);
+
+				int total200, dinheiro200, cartao200;
+
+				total200 = (copo200ml * 6);
+				dinheiro200 = (d200 *6);
+				cartao200 = (total200 - dinheiro200);
+
+
+		//7 reais	
+		System.out.print("Quantos copos de 250 ml? ");
+		int copo250ml = sc.nextInt();
+
+		System.out.print("Quantos foram no dinheiro? ");
+		int d250 = sc.nextInt();
+		int c3;
+		c3 = (copo250ml - d250);
+
+		int total250, dinheiro250, cartao250;
+
+		 total250 = (copo250ml * 7);
+		 dinheiro250 = (d250 *7);
+		 cartao250 = (total250 - dinheiro250);
+
+		//8 Reais
+		System.out.println("Quantos copos de 300 ml?");
+		int copo300ml = sc.nextInt();
+
+		System.out.println("Quantos foram no dinheiro?");
+		int d300 = sc.nextInt();
+		int c4;
+			c4 = (copo300ml - d300);
+
+			int total300, dinheiro300, cartao300;
+
+			total300 = (copo300ml * 8);
+			dinheiro300 = (d300 *8);
+			cartao300 = (total300 - dinheiro300);
+
+			// 10 reais
+		System.out.println("Quantos copos de 400 ml?");
+		int copo400ml = sc.nextInt();
+
+		System.out.println("Quantos foram no dinheiro?");
+		int d400 = sc.nextInt();
+		int c5;
+			c5 = (copo400ml - d400);
+
+            int total400, dinheiro400, cartao400;
+
+			total400 = (copo400ml * 10);
+			dinheiro400 = (d400 *10);
+			cartao400 = (total400 - dinheiro400);
+
+			//12 reais
+		System.out.print("Quantos copos de 500 ml? ");
+		int copo500ml = sc.nextInt();
+
+		System.out.print("Quantos foram no dinheiro? ");
+		int d500 = sc.nextInt();
+		int c6;
+			c6 = (copo500ml - d500);
+
+			int total500, dinheiro500, cartao500;
+			total500 = (copo400ml * 12);
+			dinheiro500 = (d400 *12);
+			cartao500 = (total500 - dinheiro500);
+
+		System.out.print("Quantas Halls/Mentos? ");
+		int pastilhas = sc.nextInt();
+
+		System.out.print("Quantas foram no dinheiro? ");
+		int dpastilha = sc.nextInt();
+		int c7;
+				c7 = (pastilhas - dpastilha);
+
+            int totalpastilha, dinheiropastilha, cartaopastilha;
+
+			totalpastilha = (pastilhas * 2);
+			dinheiropastilha = (dpastilha *2);
+			cartaopastilha = (totalpastilha - dinheiropastilha);
+
+			int totalgeral, cartaogeral, dinheirogeral;
+			totalgeral = (total150)+(total200)+(total250)+(total300)+(total400)+(total500);
+			dinheirogeral = (dinheiro150)+(dinheiro200)+(dinheiro250)+(dinheiro300)+(dinheiro400)+(dinheiro500);
+			cartaogeral = (cartao150)+(cartao200)+(cartao250)+(cartao300)+(cartao400)+(cartao500);
+			System.out.println();
+			System.out.printf("Total do dia = R$ %d.\n", totalgeral);
+			 System.out.println();
+			System.out.printf("Total em Dinheiro = R$ %d.\n", dinheirogeral);
+			 System.out.println();
+		    System.out.printf("Total no Cartão = R$ %d.\n", cartaogeral);
+		    System.out.println();
+		    System.out.println("Saber resto dos dados?");
+		    System.out.println();
+		    System.out.println("Se sim, digite 1 e aperte enter.");
+		 int x = sc.nextInt();
+         if(x==1){
+		    System.out.println("150ml:");
+		    System.out.println("Usados hoje:"+ copo150ml);
+		    System.out.println("No cartão: "+ c1+" copos / "+cartao150+" reais.");
+		    System.out.println("No dinheiro: " + d150+" copos / "+dinheiro150+" reais.");
+		    System.out.println("Totalizando: " + copo150ml+" copos / "+total150+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		 }
+		int x1 = sc.nextInt();
+		if(x1==1) {
+			System.out.println("200ml:");
+		    System.out.println("Usados hoje:"+ copo200ml);
+		    System.out.println("No cartão: "+ c2+" copos / "+cartao200+" reais.");
+		    System.out.println("No dinheiro: " + d200+" copos / "+dinheiro200+" reais.");
+		    System.out.println("Totalizando: " + copo200ml+" copos / "+total200+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		}
+		int x2 = sc.nextInt();
+		if(x2==1) {
+			System.out.println("250ml:");
+		    System.out.println("Usados hoje:"+ copo250ml);
+		    System.out.println("No cartão: "+ c3+" copos / "+cartao250+" reais.");
+		    System.out.println("No dinheiro: " + d250+" copos / "+dinheiro250+" reais.");
+		    System.out.println("Totalizando: " + copo250ml+" copos / "+total250+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		}
+		int x3 = sc.nextInt();
+		if(x3==1) {
+			System.out.println("300ml:");
+		    System.out.println("Usados hoje:"+ copo300ml);
+		    System.out.println("No cartão: "+ c4+" copos / "+cartao300+" reais.");
+		    System.out.println("No dinheiro: " + d300+" copos / "+dinheiro300+" reais.");
+		    System.out.println("Totalizando: " + copo300ml+" copos / "+total300+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		}
+
+		int x4 = sc.nextInt();
+		if(x4==1) {
+			System.out.println("400ml:");
+		    System.out.println("Usados hoje:"+ copo400ml);
+		    System.out.println("No cartão: "+ c5+" copos / "+cartao400+" reais.");
+		    System.out.println("No dinheiro: " + d400+" copos / "+dinheiro400+" reais.");
+		    System.out.println("Totalizando: " + copo400ml+" copos / "+total400+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		}
+		int x5 = sc.nextInt();
+		if(x5==1) {
+			System.out.println("500ml:");
+		    System.out.println("Usados hoje:"+ copo500ml);
+		    System.out.println("No cartão: "+ c6+" copos / "+cartao500+" reais.");
+		    System.out.println("No dinheiro: " + d500+" copos / "+dinheiro500+" reais.");
+		    System.out.println("Totalizando: " + copo500ml+" copos / "+total500+" reais.");
+		    System.out.println("Digite 1 e aperte enter. para continuar.");
+		}
+		int x6 = sc.nextInt();
+		if(x6==1) {
+			System.out.println("Halls/Mentos:");
+			System.out.println("Usados hoje:"+ pastilhas);
+		    System.out.println("No cartão: "+ c7+" copos / "+cartaopastilha+" reais.");
+		    System.out.println("No dinheiro: " + dpastilha+" copos / "+dinheiropastilha+" reais.");
+		    System.out.println("Totalizando: " + pastilhas+" copos / "+totalpastilha+" reais.");
+		    System.out.println("Todos os dados já foram listados.");
+		}
+
+     sc.close();
+	}
+
+}
